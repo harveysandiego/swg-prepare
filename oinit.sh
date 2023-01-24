@@ -6,8 +6,8 @@ sudo yum check-update
 
 echo "Making a folder for dependencies"
 #Make a folder for dependencies
-sudo mkdir ~/dependencies
-sudo cd ~/dependencies
+mkdir ~/dependencies
+cd ~/dependencies
 
 #Install Oracle Preinstall package
 echo "Running Oracle Preinstall Package"
@@ -42,15 +42,15 @@ sudo yum install python39-ply -y
 
 echo "Que Set PATHs"
 #Set Paths in Oracle bashrc
-sudo sh ./oracle_paths
+sudo sh /home/swg/swg-prepare/oracle_paths.sh
 
-#Download Oracle 21.3.0 Database
+#Download Oracle 19.3.0 Database
 echo "Queing Oracle Database Utilities for download"
-sh ./oracle_downloads.sh
+sh /home/swg/swg-prepare/oracle_downloads.sh
 
 #Make directories and extract
 echo "Que Oracle DB Extract"
-sudo sh ./oracle_extract.sh
+sudo sh /home/swg/swg-prepare/oracle_extract.sh
 
 #DEPRECATED STEPS
 #These steps are now done by the oracle preinstall package, leaving it here anyways for reference or future needs

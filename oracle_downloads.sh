@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Download Oracle 21.3.0 Database
+#Download Oracle 19.3.0 Database
 echo 'Downloading Oracle Database Utilities'
-pip3 install gdown
+sudo pip3 install gdown
 
 #Oracle 19c
 gdown https://drive.google.com/uc?id=10jaeSCM4lZt6ZikmabiI7JjNFVSPz4jv
