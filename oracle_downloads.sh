@@ -6,12 +6,15 @@ sudo pip3 install gdown
 
 #Oracle 19c
 gdown https://drive.google.com/uc?id=10jaeSCM4lZt6ZikmabiI7JjNFVSPz4jv
-#basic 19.17
-gdown https://drive.google.com/uc?id=1XZf0NBjheafNIxOdBgM6C_CmJvakGyhZ
-#devel 19.17
-gdown https://drive.google.com/uc?id=1dEa1LDWDCtWw0znpMdBTxloqIZuklFvF
-#sqlplus 19.17
-gdown https://drive.google.com/uc?id=1padfmqu5fotksGXguCJ6oYgR3ONTj48x
+#basic 18.3
+gdown https://drive.google.com/uc?id=1QGeNcqKC_vLETV6helKhxtkD2SizEogC
+#devel 18.3
+gdown https://drive.google.com/uc?id=1-t4_mtv7gwGWhLuvkCfshteTtP0qt4b4
+#sqlplus 18.3
+gdown https://drive.google.com/uc?id=1XBttuc4z_cV4nvE7PmG27b3Krsn17tLt
+
+#SQL Developer 22.2.1
+gdown https://drive.google.com/uc?id=1vnhStkL3-R22LWlBWKOqArTnViUltNIU
 
 #Future Use/Testing for 64-bit
 #Oracle 21c
@@ -23,5 +26,5 @@ gdown https://drive.google.com/uc?id=1padfmqu5fotksGXguCJ6oYgR3ONTj48x
 #sqlplus 21.3
 #gdown https://drive.google.com/uc?id=1Nz27IciUtIjupPM8HVo4GZwmbS5cYCB9
 
-#SQL Developer 21.2
-#gdown https://drive.google.com/uc?id=1Etl-8fobbWFVgDbf494ptxLgLS4esQJm
+#SQL Developer 20.2 (older)
+#gdown https://drive.google.com/uc?id=1zOSjYnRX9A4nqc5SCU1egsViQ9cExPnl
