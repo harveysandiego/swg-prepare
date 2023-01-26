@@ -2,7 +2,11 @@
 
 #Download Oracle 19.3.0 Database
 echo 'Downloading Oracle Database Utilities'
-sudo pip3 install gdown
+pip3 install gdown --user
+
+#Oracle 19c Preinstall Pack
+cd ~/ora_dependencies
+gdown https://drive.google.com/uc?id=1ncyp9OhtSoK5LTMl5co9TwSuNnGKn_nm
 
 #Oracle 19c
 cd ~/ora_dependencies

@@ -16,9 +16,16 @@ sudo yum check-update
 
 pause
 
+printf --  "\nMaking a folder for dependencies\n"
+#Make a folder for dependencies
+mkdir ~/ora_dependencies
+cd ~/ora_dependencies
+
+pause
+
 #Install Oracle Preinstall package
-printf --  "\nRunning Oracle Preinstall Package\n"
-sudo yum install -y oracle-database-preinstall-19c.x86_64
+#printf --  "\nRunning Oracle Preinstall Package\n"
+#sudo yum install -y oracle-database-preinstall-19c.x86_64
 #Future Use/Testing for 64-bit
 #sudo yum install -y oracle-database-preinstall-21c.x86_64
 
@@ -31,11 +38,6 @@ sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 
 pause
-
-printf --  "\nMaking a folder for dependencies\n"
-#Make a folder for dependencies
-mkdir ~/ora_dependencies
-cd ~/ora_dependencies
 
 printf --  "\nDownloading and installing Azul Java 11\n"
 #Download and install java (be sure to check Azul for the latest 32-bit Java 11 for SWG and 64-bit for sqldeveloper)
@@ -61,22 +63,22 @@ pause
 
 printf --  "\nQue Set PATHs\n"
 #Set Paths in Oracle bashrc
-sudo sh /home/swg/swg-prepare/oracle_paths.sh
+sudo sh ~/swg-prepare/oracle_paths.sh
 
 pause
 
 #Download Oracle 19.3.0 Database
 printf --  "\nQueing Oracle Database for download\n"
-sh /home/swg/swg-prepare/oracle_downloads.sh
+sh ~/swg-prepare/oracle_downloads.sh
 
 pause
 
 #Make directories and extract
 printf --  "\nQue Oracle DB Extract\n"
-sudo sh /home/swg/swg-prepare/oracle_extract.sh
+sudo sh ~/swg-prepare/oracle_extract.sh
 
 pause
 
 #Move install scripts to Oracle User
 printf --  "\nQue install scripts for transfer to Oracle user\n"
-sudo sh /home/swg/swg-prepare/oracle_user.sh
+sudo sh ~/swg-prepare/oracle_user.sh
