@@ -89,3 +89,10 @@ At any point in the future you can access sqldeveloper using the following comma
 /opt/sqldeveloper/sqldeveloper.sh
 
 To be continued with guide on setting up communcation between mulitserver configurations.....
+
+
+# Premade OVAs:
+
+<strong>Bare OL8 OS</strong> - This is a custom Oracle Linux 8.7 Install with XFCE and the Brave Webbrowser. This is a good starting point for following the guide.
+
+<strong>SWGSource_OL8</strong> - This is an OVA that has already had the DB and tools setup. It is ready to run the guide on SWGSource for installing the game.

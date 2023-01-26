@@ -1,6 +1,6 @@
 responseFileVersion=/oracle/assistants/rspfmt_dbca_response_schema_v12.2.0
-gdbName={ORACLE_SID}
-sid={ORACLE_SID}
+gdbName=swg
+sid=swg
 createServerPool=false
 createAsContainerDatabase=false
 templateName=General_Purpose.dbc

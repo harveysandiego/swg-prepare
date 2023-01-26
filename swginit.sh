@@ -12,7 +12,7 @@ pause
 
 #Install SWG Dependencies
 printf --  "\nInstalling Dependencies for Compiling SWG\n"
-yum install ant clang cmake libaio.i686 libgcc.i686 glibc.i686 glibc-devel.i686 libstdc++-devel.i686 ncurses-devel.i686 libxml2-devel libxml2-devel.i686 pcre-devel pcre-devel.i686 libcurl.i686 libcurl-devel libcurl-devel.i686 boost boost.i686 boost-devel boost-devel.i686 sqlite-devel sqlite-devel.i686 libnsl.i686 -y
+yum install ant clang bison flex cmake libaio.i686 libgcc.i686 glibc.i686 glibc-devel.i686 libstdc++-devel.i686 ncurses-devel.i686 libxml2-devel libxml2-devel.i686 pcre-devel pcre-devel.i686 libcurl.i686 libcurl-devel libcurl-devel.i686 boost boost.i686 boost-devel boost-devel.i686 sqlite-devel sqlite-devel.i686 libnsl.i686 -y
 cd /home/swg/swg_dependencies
 wget https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.zip
 unzip boost_1_81_0.zip 

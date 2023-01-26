@@ -53,19 +53,19 @@ menu "Choose Installation Option:" selected_choice "${selections[@]}"
 #Process Selection
 echo "Selected choice: $selected_choice"
 
-if $selected_choice == "Single Server Install"
+if [ "$selected_choice" = "Single Server Install" ];
 then
         sh /home/swg/swg-prepare/single_server_install.sh
 
-elif $selected_choice == "Multi Server Install - Database"
+elif [ "$selected_choice" = "Multi Server Install - Database" ];
 then
         sh /home/swg/swg-prepare/multi_server_install_dbserver.sh
 
-elif $selected_choice == "Multi Server Install - Gameserver (Oracle 8)"
+elif [ "$selected_choice" = "Multi Server Install - Gameserver (Oracle 8)" ];
 then
         sh /home/swg/swg-prepare/multi_server_install_gameserver.sh
 
-elif $selected_choice == "Multi Server Install - Gameserver (Debian 11)"
+elif [ "$selected_choice" = "Multi Server Install - Gameserver (Debian 11)" ];
 then
         sh /home/swg/swg-prepare/multi_server_install_gameserver_deb11.sh
 fi
