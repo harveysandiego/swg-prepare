@@ -41,7 +41,7 @@ pause
 #Que up SWG Inititalization
 printf -- "\nQue Up SWG Initialization Script\n"
 pause
-~/swg/swg-prepare/swginit.sh
+~/swg-prepare/swginit.sh
 
 pause
 #source the profiles
