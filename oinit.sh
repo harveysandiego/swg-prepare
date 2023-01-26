@@ -8,8 +8,6 @@ function pause()
         printf -- "\n\n"
 }
 
-printf --  "\n####################\n\nWelcome to the SWG Server Preparation Script!\nThis script is designed primarily for Oracle Linux 8.\nThis may not work on distros without those available packages.\n\n####################\n"
-
 pause
 
 printf --  "\nInitializing Server and Checking for updates\n"
@@ -36,8 +34,8 @@ pause
 
 printf --  "\nMaking a folder for dependencies\n"
 #Make a folder for dependencies
-mkdir ~/dependencies
-cd ~/dependencies
+mkdir ~/ora_dependencies
+cd ~/ora_dependencies
 
 printf --  "\nDownloading and installing Azul Java 11\n"
 #Download and install java (be sure to check Azul for the latest 32-bit Java 11 for SWG and 64-bit for sqldeveloper)

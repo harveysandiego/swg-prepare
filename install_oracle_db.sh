@@ -1,11 +1,23 @@
 #!/bin/bash
 
+#Pause function
+function pause()
+{
+        printf -- "\n\n"
+        read -s -n 1 -p "Press any button to continue setup or ctrl+c to quit..."
+        printf -- "\n\n"
+}
+
+pause
+
+printf -- "\nStarting Oracle Database Installation. Please be patient while it runs.\n"
+
 cd /u01/app/oracle/product/19.3.0/dbhome_1
 
 # Fake Oracle Linux 7.
 export CV_ASSUME_DISTID=OEL7.6
 
-/runInstaller -ignorePrereq -waitforcompletion -silent                        \
+/u01/app/oracle/product/19.3.0/dbhome_1/runInstaller -ignorePrereq -waitforcompletion -silent                        \
     -responseFile ${ORACLE_HOME}/install/response/db_install.rsp               \
     oracle.install.option=INSTALL_DB_SWONLY                                    \
     ORACLE_HOSTNAME=${ORACLE_HOSTNAME}                                         \
