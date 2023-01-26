@@ -6,7 +6,7 @@ pip3 install gdown --user
 
 #Oracle 19c Preinstall Pack
 cd ~/ora_dependencies
-gdown https://drive.google.com/uc?1Z-iOThbbSenPdZF1ohr-TCe17qNgVEPe
+gdown https://drive.google.com/uc?id=1Z-iOThbbSenPdZF1ohr-TCe17qNgVEPe
 
 #Oracle 19c
 cd ~/ora_dependencies
