@@ -14,18 +14,18 @@ pause
 
 #Que up initialization script
 printf -- "\nQue Up Initialization Script\n"
-sh /home/swg/swg-prepare/oinit.sh
+~/swg-prepare/oinit.sh
 
 pause
 
 #Que up Oracle Installers
 printf -- "\nQue Up Oracle Installation Scripts\n"
-sh /home/swg/swg-prepare/oracle_installer.sh
+~/swg-prepare/oracle_installer.sh
 
 #Create Oracle Service
 printf -- "\n\nCreate Oracle Service to start and stop the DB\n"
 pause
-sudo sh /home/swg/swg-prepare/oservice.sh
+~/swg-prepare/oservice.sh
 
 #Make a folder for dependencies
 printf --  "\n\nMaking a folder for SWG dependencies\n"
@@ -36,12 +36,12 @@ cd ~/swg_dependencies
 #Que Oracle Utilities for download
 printf --  "\n\nQueing Oracle Utilities for download\n"
 pause
-sh /home/swg/swg-prepare/server_downloads.sh
+~/swg-prepare/server_downloads.sh
 
 #Que up SWG Inititalization
 printf -- "\nQue Up SWG Initialization Script\n"
 pause
-sudo sh /home/swg/swg-prepare/swginit.sh
+~/swg/swg-prepare/swginit.sh
 
 pause
 #source the profiles
@@ -64,4 +64,4 @@ ant swg
 #Copy servercommon.cfg
 
 printf -- "\n\nCopy servercommon.cfg to insert new java locations.\n"
-sudo cp /home/swg/swg-prepare/servercommon.cfg /home/swg/swg-main/exe/linux/servercommon.cfg
+sudo cp ~/swg-prepare/servercommon.cfg ~/swg-main/exe/linux/servercommon.cfg

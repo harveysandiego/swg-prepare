@@ -21,37 +21,29 @@ printf --  "\nMaking a folder for dependencies\n"
 mkdir ~/ora_dependencies
 cd ~/ora_dependencies
 
-pause
-
-#Install Oracle Preinstall package
+#Install Oracle Preinstall package (ONLY WORKS ON ORACLE)
 #printf --  "\nRunning Oracle Preinstall Package\n"
 #sudo yum install -y oracle-database-preinstall-19c.x86_64
 #Future Use/Testing for 64-bit
 #sudo yum install -y oracle-database-preinstall-21c.x86_64
 
-pause
-
-printf --  "\nSetting SELinux to permissive\n"
 #Set SELinux to Permissive
+printf --  "\nSetting SELinux to permissive\n"
+pause
 sudo setenforce Permissive
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 
-pause
-
-printf --  "\nDownloading and installing Azul Java 11\n"
 #Download and install java (be sure to check Azul for the latest 32-bit Java 11 for SWG and 64-bit for sqldeveloper)
+printf --  "\nDownloading and installing Azul Java 11\n"
+pause
 wget https://cdn.azul.com/zulu/bin/zulu11.62.17-ca-jdk11.0.18-linux.i686.rpm
 sudo yum install ./zulu11.62.17-ca-jdk11.0.18-linux.i686.rpm -y
 wget https://cdn.azul.com/zulu/bin/zulu11.62.17-ca-jdk11.0.18-linux.x86_64.rpm
 sudo yum install ./zulu11.62.17-ca-jdk11.0.18-linux.x86_64.rpm -y
 
-pause
-
 printf --  "\nInstalling additional dependencies for 32bit\n"
 sudo yum install libXext.i686 libXrender.i686 libXtst.i686 -y
-
-pause
 
 printf --  "\nInstalling Python and Pip\n"
 #Install Python (This command could vary by distro)
@@ -59,26 +51,18 @@ sudo yum install python39 -y
 sudo yum install python39-pip -y
 sudo yum install python39-ply -y
 
-pause
-
-printf --  "\nQue Set PATHs\n"
-#Set Paths in Oracle bashrc
-sudo sh ~/swg-prepare/oracle_paths.sh
-
-pause
-
-#Download Oracle 19.3.0 Database
+#Download Oracle 19.3.0 Database and Preinstall pack
 printf --  "\nQueing Oracle Database for download\n"
-sh ~/swg-prepare/oracle_downloads.sh
-
 pause
+~/swg-prepare/oracle_downloads.sh
 
 #Make directories and extract
 printf --  "\nQue Oracle DB Extract\n"
-sudo sh ~/swg-prepare/oracle_extract.sh
-
 pause
+~/swg-prepare/oracle_extract.sh
 
-#Move install scripts to Oracle User
-printf --  "\nQue install scripts for transfer to Oracle user\n"
-sudo sh ~/swg-prepare/oracle_user.sh
+
+echo "Setting password for Oracle user"
+pause
+#set Oracle User Password
+printf -- "oracle:swgevolve" | sudo chpasswd

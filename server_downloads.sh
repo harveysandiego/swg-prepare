@@ -2,7 +2,7 @@
 
 #Download Utilities for interacting with the Oracle Database
 printf -- '\nDownloading Oracle Database Utilities\n'
-sudo pip3 install gdown
+pip3 install gdown --user
 
 #basic 18.3
 gdown https://drive.google.com/uc?id=1QGeNcqKC_vLETV6helKhxtkD2SizEogC
