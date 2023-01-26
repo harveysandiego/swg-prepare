@@ -15,7 +15,7 @@ printf -- '\n\nStart the Listener\n'
 lsnrctl start
 
 #Create DB
-printf -- '\n\nCreate Datatbase in silent mode\n'
+printf -- '\n\nCreate Datatbase in silent mode\n\n\n!!!SAFE TO IGNORE WARNINGS ABOUT PASSWORD!!!\n\nThis step will take awhile.\n\n\n'
 pause
 # Silent mode.
 dbca -silent -createDatabase -responseFile /home/oracle/swg-prepare/db_create.rsp                                                  

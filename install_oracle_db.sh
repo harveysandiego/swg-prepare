@@ -10,12 +10,12 @@ function pause()
 
 pause
 
-printf -- "\nStarting Oracle Database Installation. Please be patient while it runs.\n"
+printf -- "\nStarting Oracle Database Installation. Please be patient while it runs.\n\n\n!!!IT IS SAFE TO IGNORE THE WARNINGS AND JUST LET IT RUN!!!\n\n\n"
 
 cd /u01/app/oracle/product/19.3.0/dbhome_1
 
 # Fake Oracle Linux 7.
-export CV_ASSUME_DISTID=OEL7.6
+export CV_ASSUME_DISTID=OEL7.8
 
 /u01/app/oracle/product/19.3.0/dbhome_1/runInstaller -ignorePrereq -waitforcompletion -silent                        \
     -responseFile ${ORACLE_HOME}/install/response/db_install.rsp               \
