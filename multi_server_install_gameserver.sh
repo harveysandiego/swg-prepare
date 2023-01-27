@@ -26,15 +26,16 @@ sudo yum install python39-pip -y
 #Que Oracle Utilities for download
 printf --  "\n\nQueing Oracle Utilities for download\n"
 pause
-sh /home/swg/swg-prepare/server_downloads.sh
+~/swg-prepare/server_downloads.sh
 
 #Que up SWG Inititalization
 printf -- "\n\nQue Up SWG Initialization Script\n"
 pause
-sudo sh /home/swg/swg-prepare/swginit.sh
+~/swg-prepare/swginit.sh
 
-pause
 #source the profiles
+printf -- "\nSourcing profiles from previous step\n"
+pause
 source /etc/profile.d/oracle.sh
 source /etc/profile.d/java.sh
 
@@ -53,4 +54,5 @@ ant swg
 #Copy servercommon.cfg
 
 printf -- "\n\nCopy servercommon.cfg to insert new java locations.\n"
-sudo cp /home/swg/swg-prepare/servercommon.cfg /home/swg/swg-main/exe/linux/servercommon.cfg
+pause
+sudo cp ~/swg-prepare/servercommon.cfg ~/swg-main/exe/linux/servercommon.cfg

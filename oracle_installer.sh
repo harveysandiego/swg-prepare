@@ -11,7 +11,6 @@ function pause()
 
 #Que up DB Install
 printf -- "\nLog into Oracle User and Que Database Installation\n"
-pause
 sudo -i -u oracle -H sh -c "sh /home/oracle/swg-prepare/install_oracle_db.sh"
 
 #Run 1st root script

@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 
 #Pause function
 function pause()
@@ -8,16 +8,15 @@ function pause()
         printf -- "\n\n"
 }
 
-pause
-
+#Check for available updates
 printf --  "\nInitializing Server and Checking for updates\n"
-#Update
+pause
 sudo yum check-update
 
-pause
 
-printf --  "\nMaking a folder for dependencies\n"
 #Make a folder for dependencies
+printf --  "\nMaking a folder for dependencies\n"
+pause
 mkdir ~/ora_dependencies
 cd ~/ora_dependencies
 

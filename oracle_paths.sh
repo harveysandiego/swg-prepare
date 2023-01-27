@@ -1,7 +1,7 @@
 #!/bin/bash
 
-printf -- "Set PATHs"
 #Set Paths in Oracle bashrc
+printf -- "Set PATHs"
 echo '# Oracle Settings' | tee -a /home/oracle/.bashrc
 echo 'export TMP=/tmp;' | tee -a /home/oracle/.bashrc
 echo 'export TMPDIR=$TMP;' | tee -a /home/oracle/.bashrc

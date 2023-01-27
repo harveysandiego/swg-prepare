@@ -14,18 +14,17 @@ pause
 
 #Que up initialization script
 printf -- "\nQue Up Initialization Script\n"
-sh /home/swg/swg-prepare/oinit.sh
-
-pause
+~/swg-prepare/oinit.sh
 
 #Que up Oracle Installers
 printf -- "\nQue Up Oracle Installation Scripts\n"
-sh /home/swg/swg-prepare/oracle_installer.sh
+pause
+~/swg-prepare/oracle_installer.sh
 
 #Create Oracle Service
 printf -- "\n\nCreate Oracle Service to start and stop the DB\n"
 pause
-sudo sh /home/swg/swg-prepare/oservice.sh
+~/swg-prepare/oservice.sh
 
 pause
 #Thank you
