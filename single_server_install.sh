@@ -8,7 +8,7 @@ function pause()
         printf -- "\n\n"
 }
 
-printf --  "\n####################\n\nWelcome to the SWG Server Preparation Script!\nThis script is designed primarily for Oracle Linux 8.\nThis may not work on distros without those available packages.\n\n!!!This is the Single Server Installation and will install the Database and SWG Server on Oracle Linux 8!!!\n\n\n####################\n"
+printf --  "\n####################\n\nWelcome to the SWG Server Preparation Script!\nThis script is designed primarily for Oracle/Alma/Rocky Linux 8.\nThis may not work on distros without those available packages.\n\n!!!This is the Single Server Installation and will install the Database and SWG Server on Oracle/Alma/Rocky Linux 8!!!\n\n\n####################\n"
 
 pause
 
@@ -53,13 +53,6 @@ printf -- "\n\nFetching Install files from Source\n"
 pause
 #Fetch Install files from Source
 git clone https://github.com/SWG-Source/swg-main.git ~/swg-main
-
-#temporary fix
-printf -- "\n\nCopy python scripts - temp fix\n\n"
-pause
-sudo cp ~/swg-prepare/temp/build_planet_crc_string_tables.py ~/swg-main/utils/
-sudo cp ~/swg-prepare/temp/build_quest_crc_string_tables.py ~/swg-main/utils/
-sudo cp ~/swg-prepare/temp/build_object_template_crc_string_tables.py ~/swg-main/utils/
 
 #Install SWG
 printf -- "\n\nInstalling SWG\n"

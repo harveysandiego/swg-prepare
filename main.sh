@@ -40,7 +40,7 @@ function menu() {
 selections=(
 "Single Server Install"
 "Multi Server Install - Database"
-"Multi Server Install - Gameserver (Oracle 8)"
+"Multi Server Install - Gameserver (Oracle/Alma/Rocky 8)"
 "Multi Server Install - Gameserver (Debian 11)"
 )
 
@@ -61,7 +61,7 @@ elif [ "$selected_choice" = "Multi Server Install - Database" ];
 then
         ~/swg-prepare/multi_server_install_dbserver.sh
 
-elif [ "$selected_choice" = "Multi Server Install - Gameserver (Oracle 8)" ];
+elif [ "$selected_choice" = "Multi Server Install - Gameserver (Oracle/Alma/Rocky 8)" ];
 then
         ~/swg-prepare/multi_server_install_gameserver.sh
 

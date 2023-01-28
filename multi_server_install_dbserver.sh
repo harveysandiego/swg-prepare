@@ -8,7 +8,7 @@ function pause()
         printf -- "\n\n"
 }
 
-printf --  "\n####################\n\nWelcome to the SWG Server Preparation Script!\nThis script is designed primarily for Oracle Linux 8.\nThis may not work on distros without those available packages.\n\n!!!This is the Multi Server Installation and will ONLY install the Database on Oracle Linux 8!!!\n\n\n####################\n"
+printf --  "\n####################\n\nWelcome to the SWG Server Preparation Script!\nThis script is designed primarily for Oracle/Alma/Rocky Linux 8.\nThis may not work on distros without those available packages.\n\n!!!This is the Multi Server Installation and will ONLY install the Database on Oracle/Alma/Rocky Linux 8!!!\n\n\n####################\n"
 
 pause
 

@@ -2,9 +2,10 @@
 
 Original Guide by Tekohswg
 
-Modified by RezecNoble - Designed for Oracle Linux
+Modified by RezecNoble - Designed for Oracle Linux 8 / Alma Linux 8 / Rocky Linux 8
+(Should also apply to RedHat Linux 8 which these distros are based on)
 
-The first step which is outside the scope of this guide is to install Oracle Linux 8 or attain a server that is already running Oracle Linux 8. This is my recommendation right now because its one of the smoothest install processes for the Oracle Database.
+The first step which is outside the scope of this guide is to install Oracle/Alma/Rocky Linux 8 or attain a server that is already running it. This is my recommendation right now because its one of the smoothest install processes for the Oracle Database.
 
 This guide and script are going to assume the hostname/username of swg. Future releases will include a config file for defining custom variables.
 
@@ -70,7 +71,7 @@ This will launch a menu with four options.
 
 - "Single Server Install"
 - "Multi Server Install - Database"
-- "Multi Server Install - Gameserver (Oracle 8)"
+- "Multi Server Install - Gameserver (Oracle/Alma/Rocky 8)"
 - "Multi Server Install - Gameserver (Debian 11)" (Still being tested, do not use)
 
 <em>Single Server Installations</em> are meant for running your DB and Gameserver on a single installation of Oracle 8.
@@ -79,13 +80,42 @@ This option is best for prepping a new VM, running a test server or a developmen
 
 <em>Multi Server Options:</em>
 
-The first option is meant for installing the Oracle database and setting the necessary configurations on a server running Oracle Linux 8.
+The first option is meant for installing the Oracle database and setting the necessary configurations on a server running Oracle/Alma/Rocky Linux 8.
 
-The second option is meant for installing the Gameserver on a server running Oracle Linux 8.
+The second option is meant for installing the Gameserver on a server running Oracle/Alma/Rocky Linux 8.
 
 The third option is meant for installing the Gameserver on a server running Debian 11. (Still being tested, do not use)
 
-At any point in the future you can access sqldeveloper using the following command.
-/opt/sqldeveloper/sqldeveloper.sh
 
-To be continued with guide on setting up communcation between mulitserver configurations.....
+# Post Install:
+
+At any point in the future you can access sqldeveloper using the following command.
+
+`/opt/sqldeveloper/sqldeveloper.sh`
+
+As SQL Developer loads, it will ask you if you want to import your preferences. Click No. After loading some more, it will ask you about reporting your usage to Oracle. Uncheck the box to opt out and click OK.
+
+We want to add some new connections. Click the green plus icon on the left-hand side under Connections. First, enter these inputs and click Save.
+
+`Connection name: system@swg
+Username: system
+Password: swg
+[x] Save Password
+SID: swg`
+
+Create another connection with these inputs and click save again:
+
+`Connection name: swg@swg
+Username: swg
+Password: swg
+[x] Save Password
+SID: swg`
+
+With both these connections created, close this window. Your two new connections will now appear on the list on the left-hand side. Double-click on system@swg to connect as system.
+
+That’s it! Congratulations on building your SWG server from scratch! I knew you could do it.
+
+
+
+
+# To be continued with guide on setting up communcation between mulitserver configurations.....

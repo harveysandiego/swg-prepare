@@ -44,13 +44,6 @@ pause
 #Fetch Install files from Source
 git clone https://github.com/SWG-Source/swg-main.git ~/swg-main
 
-#temporary fix
-printf -- "\n\nCopy python scripts - temp fix\n\n"
-pause
-sudo cp ~/swg-prepare/temp/build_planet_crc_string_tables.py ~/swg-main/utils/
-sudo cp ~/swg-prepare/temp/build_quest_crc_string_tables.py ~/swg-main/utils/
-sudo cp ~/swg-prepare/temp/build_object_template_crc_string_tables.py ~/swg-main/utils/
-
 pause
 printf -- "\n\n##############################\n\n"
 printf -- "\n\nSTOP! Before Continuing to the next step you must refer to the guide for configuring connections to your DB Server!\n\n"
