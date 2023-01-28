@@ -21,14 +21,6 @@ sudo sh ~/swg_dependencies/boost_1_81_0/bootstrap.sh
 sudo ./b2 install
 
 
-
-#TODO: Rewrite those build scripts in Python3 as Python2 is Depracted
-printf --  "\n\nInstalling Python2\n"
-pause
-#Install Python 2 to compile CRCs
-sudo yum install python2 -y
-sudo cp /usr/bin/python2 /usr/bin/python
-
 #Install oracle instantclients
 printf --  "\nInstalling Oracle Instant clients\n"
 pause
