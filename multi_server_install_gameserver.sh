@@ -44,15 +44,23 @@ pause
 #Fetch Install files from Source
 git clone https://github.com/SWG-Source/swg-main.git ~/swg-main
 
+pause
+printf -- "\n\n##############################\n\n"
+printf -- "\n\nSTOP! Before Continuing to the next step you must refer to the guide for configuring connections to your DB Server!\n\n"
+printf -- "\n\n##############################\n\n"
+pause
+
+printf -- "\n\n##############################\n\n"
+printf -- "\n\nLast Warning! At this point installation will fail if you have not setup connection to your DB Server\n\n"
+printf -- "\n\n##############################\n\n"
+pause
 
 #Install SWG
 printf -- "\n\nInstalling SWG\n"
-pause
 cd ~/swg-main
 ant swg
 
 #Copy servercommon.cfg
-
 printf -- "\n\nCopy servercommon.cfg to insert new java locations.\n"
 pause
 sudo cp ~/swg-prepare/servercommon.cfg ~/swg-main/exe/linux/servercommon.cfg
