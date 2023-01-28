@@ -103,6 +103,10 @@ Password: swg
 [x] Save Password
 SID: swg`
 
+<p align="center">
+  <img src="/screenshots/img6.jpg">
+</p>
+
 Create another connection with these inputs and click save again:
 
 `Connection name: swg@swg
@@ -110,6 +114,10 @@ Username: swg
 Password: swg
 [x] Save Password
 SID: swg`
+
+<p align="center">
+  <img src="/screenshots/img7.jpg">
+</p>
 
 With both these connections created, close this window. Your two new connections will now appear on the list on the left-hand side. Double-click on system@swg to connect as system.
 
