@@ -41,7 +41,6 @@ selections=(
 "Single Server Install"
 "Multi Server Install - Database"
 "Multi Server Install - Gameserver (Oracle/Alma/Rocky 8)"
-"Multi Server Install - Gameserver (Debian 11)"
 )
 
 #Welcome Message
@@ -64,8 +63,4 @@ then
 elif [ "$selected_choice" = "Multi Server Install - Gameserver (Oracle/Alma/Rocky 8)" ];
 then
         ~/swg-prepare/multi_server_install_gameserver.sh
-
-elif [ "$selected_choice" = "Multi Server Install - Gameserver (Debian 11)" ];
-then
-        ~/swg-prepare/multi_server_install_gameserver_deb11.sh
 fi

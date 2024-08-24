@@ -34,12 +34,11 @@ sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 
 #Download and install java (be sure to check Azul for the latest 32-bit Java 11 for SWG and 64-bit for sqldeveloper)
-printf --  "\nDownloading and installing Azul Java 11\n"
+printf --  "\nDownloading and installing Azul Java 17\n"
 pause
-wget https://cdn.azul.com/zulu/bin/zulu11.62.17-ca-jdk11.0.18-linux.i686.rpm
-sudo yum install ./zulu11.62.17-ca-jdk11.0.18-linux.i686.rpm -y
-wget https://cdn.azul.com/zulu/bin/zulu11.62.17-ca-jdk11.0.18-linux.x86_64.rpm
-sudo yum install ./zulu11.62.17-ca-jdk11.0.18-linux.x86_64.rpm -y
+
+wget https://cdn.azul.com/zulu/bin/zulu17.50.19-ca-jdk17.0.11-linux.i686.rpm
+sudo yum install ./zulu17.50.19-ca-jdk17.0.11-linux.i686.rpm -y
 
 printf --  "\nInstalling additional dependencies for 32bit\n"
 sudo yum install libXext.i686 libXrender.i686 libXtst.i686 -y
@@ -64,4 +63,4 @@ pause
 echo "Setting password for Oracle user"
 pause
 #set Oracle User Password
-printf -- "oracle:swgevolve" | sudo chpasswd
+printf -- "oracle:swg" | sudo chpasswd
