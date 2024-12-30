@@ -23,6 +23,13 @@ pause
 sudo yum install python39 -y
 sudo yum install python39-pip -y
 
+#Download and install java (be sure to check Azul for the latest 32-bit Java 11 for SWG and 64-bit for sqldeveloper)
+printf --  "\nDownloading and installing Azul Java 17\n"
+pause
+
+wget https://cdn.azul.com/zulu/bin/zulu17.50.19-ca-jdk17.0.11-linux.i686.rpm
+sudo yum install ./zulu17.50.19-ca-jdk17.0.11-linux.i686.rpm -y
+
 #Que Oracle Utilities for download
 printf --  "\n\nQueing Oracle Utilities for download\n"
 pause
